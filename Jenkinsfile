@@ -16,7 +16,8 @@ pipeline {
 	stage ('Deploy') {
 		steps {
 			input 'Do you approve the deployment?'
-			sh 'nohup java -jar /home/jose/jenkins-data/jenkins_home/workspace/o-pipeline-petclinic-2-dockers/target/spring-petclinic-2.1.0.BUILD-SNAPSHOT.jar &'
+			sh 'pwd'
+			sh 'nohup java -jar target/spring-petclinic-2.1.0.BUILD-SNAPSHOT.jar &'
 		}
 	}
     }
